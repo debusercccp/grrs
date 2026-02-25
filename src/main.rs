@@ -62,3 +62,26 @@ fn main() -> Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+
+    #[test]
+    fn test_find_a_match() {
+        let pattern = "rust";
+        let content = "Linguaggio rust\nè fantastico";
+        let re = regex::Regex::new(pattern).unwrap();
+        
+        // Verifichiamo se la regex trova il pattern
+        assert!(re.is_match(content));
+    }
+
+    #[test]
+    fn test_no_match() {
+        let pattern = "java";
+        let content = "Linguaggio rust\nè fantastico";
+        let re = regex::Regex::new(pattern).unwrap();
+        
+        assert!(!re.is_match(content));
+    }
+}
