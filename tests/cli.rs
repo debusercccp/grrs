@@ -1,7 +1,6 @@
-use assert_cmd::prelude::*; // Mantiene i metodi aggiuntivi come .assert()
+use assert_cmd::prelude::*; 
 use predicates::prelude::*; 
 use std::process::Command;
-// Rimuoviamo l'importazione della funzione e usiamo la macro direttamente
 
 #[test]
 fn file_doesnt_exist() -> Result<(), Box<dyn std::error::Error>> {
