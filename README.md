@@ -28,7 +28,7 @@ Installazione
 Per installare questo strumento è necessario avere il toolchain Rust e Cargo configurati sul sistema.
 Bash
 
-cargo install --git https://github.com/tuo-utente/grrs
+cargo install --git https://github.com/debusercccp/grrs
 
 Utilizzo
 
