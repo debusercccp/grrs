@@ -9,13 +9,13 @@ use walkdir::WalkDir;
 
 #[derive(Parser)]
 struct Cli {
+    /// Ignora la differenza tra maiuscole e minuscole
+    #[arg(short, long)]
+    ignore_case: bool,
     /// Il pattern (Regex) da cercare
     pattern: String,
     /// Il file o la cartella in cui cercare
     path: std::path::PathBuf,
-    /// Ignora la differenza tra maiuscole e minuscole
-    #[arg(short, long)]
-    ignore_case: bool,
 }
 
 fn search_in_file(re: &regex::Regex, path: &Path) -> Result<()> {
